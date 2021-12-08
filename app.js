@@ -14,10 +14,18 @@ function isTriangle() {
     Number(inputs[1].value),
     Number(inputs[2].value)
   );
-  if (sumofAngle == 180) {
-    OutputEl.innerText = "Yay, The Angle form a Triangle";
+  if (
+    Number(inputs[0].value) != "" &&
+    Number(inputs[1].value) != "" &&
+    Number(inputs[2].value)
+  ) {
+    if (sumofAngle == 180) {
+      OutputEl.innerText = "Yay, The Angle form a Triangle";
+    } else {
+      OutputEl.innerText = "Oh Oh, The Angle Doesn't Form a Triangle !!";
+    }
   } else {
-    OutputEl.innerText = "Oh Oh, The Angle Doesn't Form a Triangle !!";
+    alert("Please Enter the all inputs Requored to get Angle of the Triangle!");
   }
 }
 

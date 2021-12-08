@@ -2,7 +2,13 @@ const quizForm = document.querySelector(".quiz-form");
 const btnSubmit = document.querySelector("#submit-answer");
 const outPut = document.querySelector(".output");
 
-const correctAnswers = ["90", "right angled"];
+const correctAnswers = [
+  "A geometric figure",
+  "90",
+  "right angled",
+  "Polygon",
+  "Equilateral",
+];
 
 function calculateScore() {
   let score = 0;

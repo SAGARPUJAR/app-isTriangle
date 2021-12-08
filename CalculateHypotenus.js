@@ -8,12 +8,16 @@ function calculateSumofSides(a, b) {
 }
 
 function calculateHypo() {
-  const sumofSquares1 = calculateSumofSides(
-    Number(Inputs[0].value),
-    Number(Inputs[1].value)
-  );
-  const lengthHypo = Math.sqrt(sumofSquares1);
-  output.innerText = "The length of Hypotenous is : " + lengthHypo;
+  if (Number(Inputs[0].value) != "" && Number(Inputs[1].value) != "") {
+    const sumofSquares1 = calculateSumofSides(
+      Number(Inputs[0].value),
+      Number(Inputs[1].value)
+    );
+    const lengthHypo = Math.sqrt(sumofSquares1);
+    output.innerText = "The length of Hypotenous is : " + lengthHypo.toFixed(2);
+  } else {
+    alert("Please Enter the all required Fields !");
+  }
 }
 
 btnCheck.addEventListener("click", calculateHypo);

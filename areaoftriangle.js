@@ -7,13 +7,17 @@ function CalulateTraiangle(a, b) {
 }
 
 function CalulateArea() {
-  const Result = CalulateTraiangle(
-    Number(getvals[0].value),
-    Number(getvals[1].value)
-  );
+  if ((Number(getvals[0].value) != "", Number(getvals[1].value) != "")) {
+    const Result = CalulateTraiangle(
+      Number(getvals[0].value),
+      Number(getvals[1].value)
+    );
 
-  const FinalResult = Result / 2;
-  output.innerText = "The Area of Triangle is : " + FinalResult;
+    const FinalResult = Result / 2;
+    output.innerText = "The Area of Triangle is : " + FinalResult.toFixed(2);
+  } else {
+    alert("Please Enter All Required Fields");
+  }
 }
 
 btnCheck.addEventListener("click", CalulateArea);
